@@ -2,10 +2,12 @@ import Navbar from "../components/Navbar";
 
 const Shop = () => {
   return (
-    <div className="nav">
+    <>
       <Navbar />
-      <h1>Shop Page</h1>
-    </div>
+      <div style={{paddingTop: 75}}>
+        <h1>Shop Page</h1>
+      </div>
+    </>
   );
 }
 

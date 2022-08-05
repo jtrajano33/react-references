@@ -13,9 +13,9 @@ export default function Film() {
   return (
     <main>
         <Navbar />
-        <div style={{display: "flex", flexDirection: "row", width: "100%", flexWrap: "wrap", margin: 10}}>
+        <div style={{display: "flex", flexDirection: "row", width: "100%", flexWrap: "wrap", paddingTop: 75, marginLeft: 10, marginRight:10}}>
             <div style={{width: 300}}>
-                <img src={film.image} width="100%" height="100%" style={{objectFit: "contain"}} />
+                <img src={film.image} width="100%" height="100%" style={{objectFit: "contain"}}  alt={film.title}/>
             </div>
             <div style={{marginLeft:10, width: "60%"}}>
                 <h2 style={{margin:0}}>{film.title}</h2>

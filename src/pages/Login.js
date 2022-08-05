@@ -5,7 +5,7 @@ export const Login = () => {
     return (
         <>
             <Navbar />
-            <div className="container mt-3">
+            <div className="container" style={{paddingTop: 75}}>
                 <div className="row">
                     <div className="col-md-5">
                         <Signup />

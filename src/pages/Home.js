@@ -21,12 +21,12 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      <div style={{display: "flex", flexDirection: "row", justifyContent: "center", width: "100%", flexFlow: "wrap"}}>
+      <div style={{display: "flex", flexDirection: "row", justifyContent: "center", width: "100%", flexFlow: "wrap", paddingTop: 75}} className="films">
         {films.length > 0? films.map((film, index) => {
           return(
             <div style={{width: 200, padding:10}} key={index} className="film">
                 <NavLink to={`/films/${film.id}`}>
-                  <img src={film.image} width="100%" height="100%" style={{objectFit: "contain"}} />
+                  <img src={film.image} width="100%" height="100%" style={{objectFit: "contain"}} alt={film.title} />
                 </NavLink>
             </div>
           )

@@ -2,11 +2,6 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -43,5 +38,42 @@
 
 .film:hover{
   transform: scale(1.05);
+}
+
+.burgerNav{
+  display: none;
+}
+
+.hidden{
+  display: none;
+}
+
+@media only screen and (max-width: 768px) {
+ .navStyle{
+   flex-direction: column !important;
+   justify-content: center !important;
+   align-items: center !important;
+   /* background-color: aqua !important; */
+ }
+
+ .burgerNav{
+   display: flex !important;
+   width: inherit;
+   justify-content: space-between;
+   align-items: center;
+ }
+
+  .navbar-link{
+    display: none;
+  }
+
+  .links{
+    display: none;
+  }
+
+  .navItem{
+    justify-self: flex-start;
+    align-self: flex-start;
+  }
 }
 
