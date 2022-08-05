@@ -1,13 +1,25 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+
+const links = [
+  { name: "Home", url: "/" },
+  { name: "Shop", url: "/shop" },
+  { name: "React Router Dom Implementation", url: "/about" },
+  { name: "Formik Sample", url: "/login" },
+  { name: "Styled Components Sample", url: "/styled" },
+]
 
 const Navbar = () => {
   return (
-    <div className="nav" style={{display: "flex", flexDirection: "row", justifyContent: "space-evenly", width: "100%", marginBottom:10}}>
-        <Link to="/">Home</Link>
-        <Link to="/shop">Shop</Link>
-        <Link to="/about">About</Link>
-        <Link to="/login">Register Formik Sample</Link>
-        <Link to="/styled">Styled Component Sample</Link>
+    <div className="nav" style={{display: "flex", flexDirection: "row",alignItems:"center",  justifyContent: "space-evenly", width: "100%", marginBottom:10, padding:10, paddingTop:15, paddingBottom:15, backgroundColor:"#000"}}>
+      {links.map((link, index) => (
+        <NavLink 
+          key={index} 
+          to={link.url}
+          className="navbar-link" 
+          style={props => (props.isActive? {color: "blue"} : {color: "#fff", textDecoration: "none"})}>
+            {link.name}
+        </NavLink>
+      ))}
     </div>
   );
 }

@@ -13,6 +13,14 @@ import store from './store/store';
 import { Login } from './pages/Login';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { StyledSample } from './pages/StyledSample';
+import './App.css';
+
+//Routes Info
+
+// "/" for State coming from REDUX
+// "/styled" for STYLED COMPONENTS Sample
+// "/login" for FORMIK Validation
+// "/about" and "/about/:invoiceId" for REACT ROUTER DOM Implemetation
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -25,7 +33,7 @@ root.render(
         <Route path="/about" element={<About />} />
         <Route path="/about/:invoiceId" element={<Invoice />} />
         <Route path="/shop" element={<Shop />} />
-        <Route path="/styled" element={<StyledSample />} />
+        <Route path="/styled" element={<StyledSample />} /> //Ty
         <Route
           path="*"
           element={
@@ -39,7 +47,4 @@ root.render(
   </Provider>
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
